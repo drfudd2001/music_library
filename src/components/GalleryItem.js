@@ -1,6 +1,6 @@
 import { useState } from 'react' 
 
-function GalleryItem(props){
+function GalleryItem(props) {
     let [view, setView] = useState(false)
 
     const simpleStyle = {

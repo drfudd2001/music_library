@@ -13,11 +13,13 @@ function App(){
 	
 	const handleSearch = (e, term) => {
 		e.preventDefault()
+		// Fetch Data
 		const fetchData = async () => {
 			document.title = `${term} Music`
 			const response = await fetch(API_URL + term)
 			const resData = await response.json()
 			if (resData.results.length > 0) {
+				// Set State and Context value
 				return setData(resData.results)
 			} else {
 				return setMessage('Not Found')
